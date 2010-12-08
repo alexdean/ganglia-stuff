@@ -1,0 +1,16 @@
+--- libmetrics/darwin/metrics.c.orig	2010-12-08 08:29:45.000000000 -0600
++++ libmetrics/darwin/metrics.c	2010-12-08 08:30:53.000000000 -0600
+@@ -11,7 +11,13 @@
+ 
+ #include <stdlib.h>
+ #include "interface.h"
++
++/* kvm.h is no longer in /usr/include as of osx 10.5 */
++#include "AvailabilityMacros.h"
++#ifndef MAC_OS_X_VERSION_10_5
+ #include <kvm.h>
++#endif
++
+ #include <sys/sysctl.h>
+ 
+ #include <mach/mach_init.h>
