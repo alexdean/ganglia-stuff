@@ -109,6 +109,16 @@ function reformat_conf_vars( $string, $conf_vars, $depth=0 ) {
   return $output;
 }
 
-echo reformat_conf_vars( file_get_contents( 'conf.php.in' ), $conf_vars );
-echo "\n";
+if( $argc != 2 ) {
+  echo "This script will output a version of your conf.php using the \$conf array.\n";
+  echo "Example usage: 'php ${argv[0]} conf.php > conf.php-converted'\n";
+  exit;
+}
+var_dump( $argv);
+$output = reformat_conf_vars( file_get_contents( $argv[1] ), $conf_vars );
+
+// really should run a syntax check on the generated code...
+/* $command = "php -l -r \"".str_replace( array('<?php ',' ?>'), '', $output)."\""; */
+
+echo $output;
 ?>
