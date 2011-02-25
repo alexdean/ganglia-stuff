@@ -114,7 +114,6 @@ if( $argc != 2 ) {
   echo "Example usage: 'php ${argv[0]} conf.php > conf.php-converted'\n";
   exit;
 }
-var_dump( $argv);
 $output = reformat_conf_vars( file_get_contents( $argv[1] ), $conf_vars );
 
 // really should run a syntax check on the generated code...
