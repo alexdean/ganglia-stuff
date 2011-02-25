@@ -1,5 +1,17 @@
 <?php
-$conf_vars = array(
+/* reformat_conf.php
+ * Copyright 2011, Alex Dean <alexATcrackpotDOTorg>
+ * 
+ * Use this script to convert a Ganglia conf.php file to use a $conf array.
+ * Example: $template_name => $conf['template_name']
+ *
+ * Resulting config file will be checked for syntax errors, and to ensure that
+ * all required configuration values are defined.
+ *
+ * Usage: 'php reformat_conf.php -i input-conf.php -o output-conf.php'
+ */
+
+$required_conf_vars = array(
   'template_name',
   'gmetad_root',
   'rrds',
@@ -43,7 +55,9 @@ $conf_vars = array(
   'graph_sizes_keys',
   'graph_sizes',
   'default_graph_size',
-  'case_sensitive_hostnames',
+  'case_sensitive_hostnames'
+);
+$optional_conf_vars = array(
   'optional_graphs',
   'filter_dir'
 );
@@ -102,22 +116,65 @@ function reformat_conf_vars( $string, $conf_vars, $depth=0 ) {
     if( $depth > 0 ) {
       throw $e;
     } else {
-      // Only trigger an error once we're at the top of the stack, so the line number is reported correctly.
+      // Only trigger an error once we're at the top of the stack, so the line number can be reported correctly.
       trigger_error( "Near line $line_number of source file.\n".$e->getMessage(), E_USER_ERROR );
     }
   }
   return $output;
 }
 
-if( $argc != 2 ) {
-  echo "This script will output a version of your conf.php using the \$conf array.\n";
-  echo "Example usage: 'php ${argv[0]} conf.php > conf.php-converted'\n";
+function usage() {
+  return "This script will output a version of your conf.php using the \$conf array.\n" .
+         "Example usage: 'php ${argv[0]} -i conf.php -o conf.php-converted'\n\n";
+}
+
+$options = getopt( "i:o:" );
+if( !isSet( $options['i'] ) ) {
+  echo usage();
+  echo "Missing -i (input file) option.\n";
   exit;
 }
-$output = reformat_conf_vars( file_get_contents( $argv[1] ), $conf_vars );
+if( !file_exists( $options['i'] ) ) {
+  echo usage();
+  echo "Input file '${options['i']}' does not exist.\n";
+  exit;
+}
+if( !isSet( $options['o'] ) ) {
+  echo usage();
+  echo "Missing -o (output file) option.\n";
+  exit;
+}
+if( file_exists( $options['o'] ) ) {
+  echo usage();
+  echo "Output file '${options['o']}' already exists.\n";
+  exit;
+}
 
-// really should run a syntax check on the generated code...
-/* $command = "php -l -r \"".str_replace( array('<?php ',' ?>'), '', $output)."\""; */
+$output = reformat_conf_vars( file_get_contents( $options['i'] ), array_merge( $required_conf_vars, $optional_conf_vars ) );
 
-echo $output;
+$result = file_put_contents( $options['o'], $output );
+if( !$result ) {
+  echo "Failed to write new config file to '${options['o']}'.\n";
+  echo "Permissions problem?\n";
+} else {
+  echo "Wrote converted configuration to '${options['o']}'.\n";
+}
+
+echo "Running syntax check on '${options['o']}'\n";
+system( "php -l ${options['o']}", $return );
+if( $return > 0 ) {
+  exit(1);
+}
+
+// suppress warnings: we don't care if version.php is missing, etc.
+// we're only interested in $conf
+@require $options['o'];
+$missing = array_diff( $required_conf_vars, array_keys( $conf ) );
+if( count($missing) ) {
+  echo "Generated config file is missing these required config values: ".implode( $missing, ',' );
+  exit(1);
+} else {
+  echo "All required config values are defined in '${options['o']}'.\n";
+}
+echo "Finished.\n";
 ?>
