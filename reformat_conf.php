@@ -125,10 +125,13 @@ function reformat_conf_vars( $string, $conf_vars, $depth=0 ) {
 
 function usage() {
   return "This script will output a version of your conf.php using the \$conf array.\n" .
-         "Example usage: 'php ${argv[0]} -i conf.php -o conf.php-converted'\n\n";
+         "Example usage: 'php ${argv[0]} -i conf.php -o conf.php-converted'\n" .
+         " -i : Input file\n" .
+         " -o : Output file\n" .
+         " -f : Force.  Overwrite output file if it already exists.\n\n";
 }
 
-$options = getopt( "i:o:" );
+$options = getopt( "i:o:f" );
 if( !isSet( $options['i'] ) ) {
   echo usage();
   echo "Missing -i (input file) option.\n";
@@ -145,9 +148,14 @@ if( !isSet( $options['o'] ) ) {
   exit;
 }
 if( file_exists( $options['o'] ) ) {
-  echo usage();
-  echo "Output file '${options['o']}' already exists.\n";
-  exit;
+  if( array_key_exists( 'f', $options ) ) {
+    echo "Overwriting existing '${options['o']}' due to usage of -f.\n";
+  } else {
+    echo usage();
+    echo "Output file '${options['o']}' already exists.\n";
+    echo "Please remove it, or use -f (force).\n";
+    exit;
+  }
 }
 
 $output = reformat_conf_vars( file_get_contents( $options['i'] ), array_merge( $required_conf_vars, $optional_conf_vars ) );
@@ -168,13 +176,13 @@ if( $return > 0 ) {
 
 // suppress warnings: we don't care if version.php is missing, etc.
 // we're only interested in $conf
-@require $options['o'];
-$missing = array_diff( $required_conf_vars, array_keys( $conf ) );
-if( count($missing) ) {
-  echo "Generated config file is missing these required config values: ".implode( $missing, ',' );
-  exit(1);
-} else {
-  echo "All required config values are defined in '${options['o']}'.\n";
-}
+// @require $options['o'];
+// $missing = array_diff( $required_conf_vars, array_keys( $conf ) );
+// if( count($missing) ) {
+//   echo "Generated config file is missing these required config values: ".implode( $missing, ',' );
+//   exit(1);
+// } else {
+//   echo "All required config values are defined in '${options['o']}'.\n";
+// }
 echo "Finished.\n";
 ?>
