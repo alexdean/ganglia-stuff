@@ -2,10 +2,10 @@
 /* reformat_conf.php
  * Copyright 2011, Alex Dean <alexATcrackpotDOTorg>
  * 
- * Use this script to convert a Ganglia conf.php file to use a $conf array.
+ * Use this script to convert a Ganglia PHP file to use a $conf array instead of top-level variables.
  * Example: $template_name => $conf['template_name']
  *
- * Resulting config file will be checked for syntax errors, and to ensure that
+ * Resulting file will be checked for syntax errors, and to ensure that
  * all required configuration values are defined.
  *
  * Usage: 'php reformat_conf.php -i input-conf.php -o output-conf.php'
