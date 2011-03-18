@@ -14,6 +14,12 @@
 
 require_once 'reformat.inc.php';
 
+// TODO
+// convert to $user
+// $conf['hostcols']
+// $conf['metriccols']
+
+// from get_context.php
 $user_vars = array(
   'clustername',
   'gridname',
@@ -33,11 +39,29 @@ $user_vars = array(
   'gridwalk',
   'clustergraphsize',
   'gridstack',
-  'choose_filter'
+  'choose_filter',
+  'size',
+);
+
+// from graph.php
+$graph_user_vars = array(
+  'graph',
+  'grid',
+  'self',
+  'vlabel',
+  'value',
+  'metric_name',
+  'max',
+  'min',
+  'sourcetime',
+  'load_color',
+  'summary',
+  'debug',
+  'raw_host'
 );
 
 $options = parse_input();
-$output = reformat_vars( file_get_contents( $options['i'] ), $user_vars, 'user' );
+$output = reformat_vars( file_get_contents( $options['i'] ), array_merge( $user_vars, $graph_user_vars ), 'user' );
 
 $result = file_put_contents( $options['o'], $output );
 if( !$result ) {
