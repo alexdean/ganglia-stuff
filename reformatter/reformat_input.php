@@ -61,7 +61,7 @@ $graph_user_vars = array(
 );
 
 $options = parse_input();
-$output = reformat_vars( file_get_contents( $options['i'] ), array_merge( $user_vars, $graph_user_vars ), 'user' );
+$output = reformat_vars( file_get_contents( $options['i'] ), array_merge( $user_vars, $graph_user_vars ), 'input' );
 
 $result = file_put_contents( $options['o'], $output );
 if( !$result ) {
