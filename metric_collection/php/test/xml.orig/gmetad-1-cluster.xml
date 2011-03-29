@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<!-- /c-1-1 -->
+<GANGLIA_XML VERSION="3.1.7" SOURCE="gmetad">
+  <GRID NAME="Grid1" AUTHORITY="http://rhel5-dev/ganglia/g1" LOCALTIME="1300665165">
+    <CLUSTER NAME="c-1-1" LOCALTIME="1300665155" OWNER="unspecified" LATLONG="unspecified" URL="unspecified">
+      <HOST NAME="192.168.60.111" IP="192.168.60.111" REPORTED="1300665137" TN="22" TMAX="20" DMAX="0" LOCATION="unspecified" GMOND_STARTED="1300658571">
+        <METRIC NAME="machine_type" VAL="x86_64" TYPE="string" UNITS="" TN="579" TMAX="1200" DMAX="0" SLOPE="zero" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="system"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="System architecture"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Machine Type"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="disk_free" VAL="5.497" TYPE="double" UNITS="GB" TN="65" TMAX="180" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="disk"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Total free disk space"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Disk Space Available"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="bytes_out" VAL="0.00" TYPE="float" UNITS="bytes/sec" TN="145" TMAX="300" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="network"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Number of bytes out per second"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Bytes Sent"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="proc_total" VAL="118" TYPE="uint32" UNITS=" " TN="435" TMAX="950" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="process"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Total number of processes"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Total Processes"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="gexec" VAL="OFF" TYPE="string" UNITS="" TN="279" TMAX="300" DMAX="0" SLOPE="zero" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="core"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="gexec available"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Gexec Status"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="cpu_nice" VAL="0.0" TYPE="float" UNITS="%" TN="65" TMAX="90" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="cpu"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Percentage of CPU utilization that occurred while executing at the user level with nice priority"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="CPU Nice"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="pkts_in" VAL="0.00" TYPE="float" UNITS="packets/sec" TN="145" TMAX="300" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="network"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Packets in per second"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Packets Received"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="cpu_speed" VAL="2494" TYPE="uint32" UNITS="MHz" TN="579" TMAX="1200" DMAX="0" SLOPE="zero" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="cpu"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="CPU Speed in terms of MHz"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="CPU Speed"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="boottime" VAL="1300658496" TYPE="uint32" UNITS="s" TN="579" TMAX="1200" DMAX="0" SLOPE="zero" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="system"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="The last time that the system was started"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Last Boot Time"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="cpu_wio" VAL="0.1" TYPE="float" UNITS="%" TN="65" TMAX="90" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="cpu"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Percentage of time that the CPU or CPUs were idle during which the system had an outstanding disk I/O request"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="CPU wio"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="os_name" VAL="Linux" TYPE="string" UNITS="" TN="579" TMAX="1200" DMAX="0" SLOPE="zero" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="system"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Operating system name"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Operating System"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="load_one" VAL="0.00" TYPE="float" UNITS=" " TN="85" TMAX="70" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="load"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="One minute load average"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="One Minute Load Average"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="os_release" VAL="2.6.18-164.el5" TYPE="string" UNITS="" TN="579" TMAX="1200" DMAX="0" SLOPE="zero" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="system"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Operating system release date"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Operating System Release"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="disk_total" VAL="18.728" TYPE="double" UNITS="GB" TN="1185" TMAX="1200" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="disk"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Total available disk space"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Total Disk Space"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="cpu_user" VAL="0.2" TYPE="float" UNITS="%" TN="65" TMAX="90" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="cpu"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Percentage of CPU utilization that occurred while executing at the user level"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="CPU User"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="cpu_idle" VAL="99.1" TYPE="float" UNITS="%" TN="65" TMAX="90" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="cpu"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Percentage of time that the CPU or CPUs were idle and the system did not have an outstanding disk I/O request"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="CPU Idle"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="swap_free" VAL="2064376" TYPE="float" UNITS="KB" TN="145" TMAX="180" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="memory"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Amount of available swap memory"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Free Swap Space"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="pkts_out" VAL="0.00" TYPE="float" UNITS="packets/sec" TN="145" TMAX="300" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="network"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Packets out per second"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Packets Sent"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="mem_cached" VAL="505032" TYPE="float" UNITS="KB" TN="145" TMAX="180" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="memory"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Amount of cached memory"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Cached Memory"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="load_five" VAL="0.00" TYPE="float" UNITS=" " TN="85" TMAX="325" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="load"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Five minute load average"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Five Minute Load Average"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="cpu_num" VAL="1" TYPE="uint16" UNITS="CPUs" TN="579" TMAX="1200" DMAX="0" SLOPE="zero" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="cpu"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Total number of CPUs"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="CPU Count"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="load_fifteen" VAL="0.07" TYPE="float" UNITS=" " TN="85" TMAX="950" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="load"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Fifteen minute load average"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Fifteen Minute Load Average"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="mem_free" VAL="122524" TYPE="float" UNITS="KB" TN="145" TMAX="180" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="memory"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Amount of available memory"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Free Memory"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="cpu_system" VAL="0.7" TYPE="float" UNITS="%" TN="65" TMAX="90" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="cpu"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Percentage of CPU utilization that occurred while executing at the system level"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="CPU System"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="proc_run" VAL="0" TYPE="uint32" UNITS=" " TN="435" TMAX="950" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="process"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Total number of running processes"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Total Running Processes"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="mem_total" VAL="1026932" TYPE="float" UNITS="KB" TN="579" TMAX="1200" DMAX="0" SLOPE="zero" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="memory"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Total amount of memory displayed in KBs"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Memory Total"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="cpu_aidle" VAL="89.1" TYPE="float" UNITS="%" TN="65" TMAX="3800" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="cpu"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Percent of time since boot idle CPU"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="CPU aidle"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="bytes_in" VAL="0.00" TYPE="float" UNITS="bytes/sec" TN="145" TMAX="300" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="network"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Number of bytes in per second"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Bytes Received"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="mem_buffers" VAL="176556" TYPE="float" UNITS="KB" TN="145" TMAX="180" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="memory"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Amount of buffered memory"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Memory Buffers"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="mem_shared" VAL="0" TYPE="float" UNITS="KB" TN="145" TMAX="180" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="memory"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Amount of shared memory"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Shared Memory"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="swap_total" VAL="2064376" TYPE="float" UNITS="KB" TN="579" TMAX="1200" DMAX="0" SLOPE="zero" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="memory"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Total amount of swap space displayed in KBs"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Swap Space Total"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="part_max_used" VAL="70.9" TYPE="float" UNITS="%" TN="65" TMAX="180" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="disk"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Maximum percent used for all partitions"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Maximum Disk Space Used"/>
+          </EXTRA_DATA>
+        </METRIC>
+      </HOST>
+      <HOST NAME="192.168.60.112" IP="192.168.60.112" REPORTED="1300665151" TN="8" TMAX="20" DMAX="0" LOCATION="unspecified" GMOND_STARTED="1300658571">
+        <METRIC NAME="machine_type" VAL="x86_64" TYPE="string" UNITS="" TN="585" TMAX="1200" DMAX="0" SLOPE="zero" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="system"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="System architecture"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Machine Type"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="disk_free" VAL="5.497" TYPE="double" UNITS="GB" TN="65" TMAX="180" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="disk"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Total free disk space"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Disk Space Available"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="bytes_out" VAL="0.00" TYPE="float" UNITS="bytes/sec" TN="145" TMAX="300" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="network"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Number of bytes out per second"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Bytes Sent"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="proc_total" VAL="118" TYPE="uint32" UNITS=" " TN="515" TMAX="950" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="process"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Total number of processes"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Total Processes"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="gexec" VAL="OFF" TYPE="string" UNITS="" TN="285" TMAX="300" DMAX="0" SLOPE="zero" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="core"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="gexec available"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Gexec Status"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="cpu_nice" VAL="0.0" TYPE="float" UNITS="%" TN="65" TMAX="90" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="cpu"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Percentage of CPU utilization that occurred while executing at the user level with nice priority"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="CPU Nice"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="pkts_in" VAL="0.00" TYPE="float" UNITS="packets/sec" TN="145" TMAX="300" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="network"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Packets in per second"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Packets Received"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="cpu_speed" VAL="2494" TYPE="uint32" UNITS="MHz" TN="585" TMAX="1200" DMAX="0" SLOPE="zero" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="cpu"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="CPU Speed in terms of MHz"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="CPU Speed"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="boottime" VAL="1300658496" TYPE="uint32" UNITS="s" TN="585" TMAX="1200" DMAX="0" SLOPE="zero" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="system"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="The last time that the system was started"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Last Boot Time"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="cpu_wio" VAL="0.1" TYPE="float" UNITS="%" TN="65" TMAX="90" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="cpu"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Percentage of time that the CPU or CPUs were idle during which the system had an outstanding disk I/O request"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="CPU wio"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="os_name" VAL="Linux" TYPE="string" UNITS="" TN="585" TMAX="1200" DMAX="0" SLOPE="zero" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="system"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Operating system name"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Operating System"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="load_one" VAL="0.00" TYPE="float" UNITS=" " TN="85" TMAX="70" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="load"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="One minute load average"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="One Minute Load Average"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="os_release" VAL="2.6.18-164.el5" TYPE="string" UNITS="" TN="585" TMAX="1200" DMAX="0" SLOPE="zero" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="system"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Operating system release date"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Operating System Release"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="disk_total" VAL="18.728" TYPE="double" UNITS="GB" TN="1185" TMAX="1200" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="disk"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Total available disk space"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Total Disk Space"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="cpu_user" VAL="0.2" TYPE="float" UNITS="%" TN="65" TMAX="90" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="cpu"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Percentage of CPU utilization that occurred while executing at the user level"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="CPU User"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="cpu_idle" VAL="99.1" TYPE="float" UNITS="%" TN="65" TMAX="90" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="cpu"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Percentage of time that the CPU or CPUs were idle and the system did not have an outstanding disk I/O request"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="CPU Idle"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="swap_free" VAL="2064376" TYPE="float" UNITS="KB" TN="145" TMAX="180" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="memory"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Amount of available swap memory"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Free Swap Space"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="pkts_out" VAL="0.00" TYPE="float" UNITS="packets/sec" TN="145" TMAX="300" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="network"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Packets out per second"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Packets Sent"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="mem_cached" VAL="505032" TYPE="float" UNITS="KB" TN="145" TMAX="180" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="memory"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Amount of cached memory"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Cached Memory"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="load_five" VAL="0.00" TYPE="float" UNITS=" " TN="85" TMAX="325" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="load"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Five minute load average"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Five Minute Load Average"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="cpu_num" VAL="1" TYPE="uint16" UNITS="CPUs" TN="585" TMAX="1200" DMAX="0" SLOPE="zero" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="cpu"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Total number of CPUs"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="CPU Count"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="load_fifteen" VAL="0.07" TYPE="float" UNITS=" " TN="85" TMAX="950" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="load"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Fifteen minute load average"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Fifteen Minute Load Average"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="mem_free" VAL="122524" TYPE="float" UNITS="KB" TN="145" TMAX="180" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="memory"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Amount of available memory"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Free Memory"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="cpu_system" VAL="0.7" TYPE="float" UNITS="%" TN="65" TMAX="90" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="cpu"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Percentage of CPU utilization that occurred while executing at the system level"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="CPU System"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="proc_run" VAL="0" TYPE="uint32" UNITS=" " TN="515" TMAX="950" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="process"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Total number of running processes"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Total Running Processes"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="mem_total" VAL="1026932" TYPE="float" UNITS="KB" TN="585" TMAX="1200" DMAX="0" SLOPE="zero" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="memory"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Total amount of memory displayed in KBs"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Memory Total"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="cpu_aidle" VAL="89.1" TYPE="float" UNITS="%" TN="65" TMAX="3800" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="cpu"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Percent of time since boot idle CPU"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="CPU aidle"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="bytes_in" VAL="0.00" TYPE="float" UNITS="bytes/sec" TN="145" TMAX="300" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="network"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Number of bytes in per second"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Bytes Received"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="mem_buffers" VAL="176556" TYPE="float" UNITS="KB" TN="145" TMAX="180" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="memory"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Amount of buffered memory"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Memory Buffers"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="mem_shared" VAL="0" TYPE="float" UNITS="KB" TN="145" TMAX="180" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="memory"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Amount of shared memory"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Shared Memory"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="swap_total" VAL="2064376" TYPE="float" UNITS="KB" TN="585" TMAX="1200" DMAX="0" SLOPE="zero" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="memory"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Total amount of swap space displayed in KBs"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Swap Space Total"/>
+          </EXTRA_DATA>
+        </METRIC>
+        <METRIC NAME="part_max_used" VAL="70.9" TYPE="float" UNITS="%" TN="65" TMAX="180" DMAX="0" SLOPE="both" SOURCE="gmond">
+          <EXTRA_DATA>
+            <EXTRA_ELEMENT NAME="GROUP" VAL="disk"/>
+            <EXTRA_ELEMENT NAME="DESC" VAL="Maximum percent used for all partitions"/>
+            <EXTRA_ELEMENT NAME="TITLE" VAL="Maximum Disk Space Used"/>
+          </EXTRA_DATA>
+        </METRIC>
+      </HOST>
+    </CLUSTER>
+  </GRID>
+</GANGLIA_XML>
