@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<GANGLIA_XML VERSION="3.1.7" SOURCE="gmond">
+  <CLUSTER NAME="cluster1" LOCALTIME="1300664662" OWNER="unspecified" LATLONG="unspecified" URL="unspecified">
+    <HOST NAME="cluster1-host1" IP="192.168.60.111" REPORTED="1300664657" TN="5" TMAX="20" DMAX="0" LOCATION="unspecified" GMOND_STARTED="1300658571">
+      <METRIC NAME="bytes_out" VAL="0.00" TYPE="float" UNITS="bytes/sec" TN="245" TMAX="300" DMAX="0" SLOPE="both">
+        <EXTRA_DATA>
+          <EXTRA_ELEMENT NAME="GROUP" VAL="network"/>
+          <EXTRA_ELEMENT NAME="DESC" VAL="Number of bytes out per second"/>
+          <EXTRA_ELEMENT NAME="TITLE" VAL="Bytes Sent"/>
+        </EXTRA_DATA>
+      </METRIC>
+      <METRIC NAME="proc_total" VAL="118" TYPE="uint32" UNITS=" " TN="885" TMAX="950" DMAX="0" SLOPE="both">
+        <EXTRA_DATA>
+          <EXTRA_ELEMENT NAME="GROUP" VAL="process"/>
+          <EXTRA_ELEMENT NAME="DESC" VAL="Total number of processes"/>
+          <EXTRA_ELEMENT NAME="TITLE" VAL="Total Processes"/>
+        </EXTRA_DATA>
+      </METRIC>
+    </HOST>
+    <HOST NAME="cluster1-host2" IP="192.168.60.112" REPORTED="1300664651" TN="11" TMAX="20" DMAX="0" LOCATION="unspecified" GMOND_STARTED="1300658571">
+      <METRIC NAME="bytes_out" VAL="0.00" TYPE="float" UNITS="bytes/sec" TN="245" TMAX="300" DMAX="0" SLOPE="both">
+        <EXTRA_DATA>
+          <EXTRA_ELEMENT NAME="GROUP" VAL="network"/>
+          <EXTRA_ELEMENT NAME="DESC" VAL="Number of bytes out per second"/>
+          <EXTRA_ELEMENT NAME="TITLE" VAL="Bytes Sent"/>
+        </EXTRA_DATA>
+      </METRIC>
+      <METRIC NAME="proc_total" VAL="118" TYPE="uint32" UNITS=" " TN="15" TMAX="950" DMAX="0" SLOPE="both">
+        <EXTRA_DATA>
+          <EXTRA_ELEMENT NAME="GROUP" VAL="process"/>
+          <EXTRA_ELEMENT NAME="DESC" VAL="Total number of processes"/>
+          <EXTRA_ELEMENT NAME="TITLE" VAL="Total Processes"/>
+        </EXTRA_DATA>
+      </METRIC>
+    </HOST>
+  </CLUSTER>
+</GANGLIA_XML>

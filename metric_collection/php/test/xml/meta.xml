@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<!-- /?filter=summary -->
+<GANGLIA_XML VERSION="3.1.7" SOURCE="gmetad">
+  <GRID NAME="grid1" AUTHORITY="http://rhel5-dev/ganglia/g1" LOCALTIME="1300665415">
+    <HOSTS UP="8" DOWN="0" SOURCE="gmetad"/>
+    <METRICS NAME="bytes_out" SUM="63.37" NUM="8" TYPE="double" UNITS="bytes/sec" SLOPE="both" SOURCE="gmond">
+      <EXTRA_DATA>
+        <EXTRA_ELEMENT NAME="GROUP" VAL="network"/>
+        <EXTRA_ELEMENT NAME="DESC" VAL="Number of bytes out per second"/>
+        <EXTRA_ELEMENT NAME="TITLE" VAL="Bytes Sent"/>
+      </EXTRA_DATA>
+    </METRICS>
+    <METRICS NAME="proc_total" SUM="944" NUM="8" TYPE="double" UNITS=" " SLOPE="both" SOURCE="gmond">
+      <EXTRA_DATA>
+        <EXTRA_ELEMENT NAME="GROUP" VAL="process"/>
+        <EXTRA_ELEMENT NAME="DESC" VAL="Total number of processes"/>
+        <EXTRA_ELEMENT NAME="TITLE" VAL="Total Processes"/>
+      </EXTRA_DATA>
+    </METRICS>
+    <GRID NAME="grid2" AUTHORITY="http://rhel5-dev/ganglia/g2" LOCALTIME="1300665403">
+      <HOSTS UP="4" DOWN="0" SOURCE="gmetad"/>
+      <METRICS NAME="bytes_out" SUM="33.80" NUM="4" TYPE="double" UNITS="bytes/sec" SLOPE="both" SOURCE="gmond">
+        <EXTRA_DATA></EXTRA_DATA>
+      </METRICS>
+      <METRICS NAME="proc_total" SUM="472" NUM="4" TYPE="double" UNITS=" " SLOPE="both" SOURCE="gmond">
+        <EXTRA_DATA></EXTRA_DATA>
+      </METRICS>
+    </GRID>
+    <CLUSTER NAME="cluster2" LOCALTIME="1300665407" OWNER="unspecified" LATLONG="unspecified" URL="unspecified">
+      <HOSTS UP="2" DOWN="0" SOURCE="gmetad"/>
+      <METRICS NAME="bytes_out" SUM="12.67" NUM="2" TYPE="double" UNITS="bytes/sec" SLOPE="both" SOURCE="gmond">
+        <EXTRA_DATA>
+          <EXTRA_ELEMENT NAME="GROUP" VAL="network"/>
+          <EXTRA_ELEMENT NAME="DESC" VAL="Number of bytes out per second"/>
+          <EXTRA_ELEMENT NAME="TITLE" VAL="Bytes Sent"/>
+        </EXTRA_DATA>
+      </METRICS>
+      <METRICS NAME="proc_total" SUM="236" NUM="2" TYPE="double" UNITS=" " SLOPE="both" SOURCE="gmond">      
+    </CLUSTER>
+    <CLUSTER NAME="cluster1" LOCALTIME="1300665410" OWNER="unspecified" LATLONG="unspecified" URL="unspecified">
+      <HOSTS UP="2" DOWN="0" SOURCE="gmetad"/>
+      <METRICS NAME="bytes_out" SUM="16.90" NUM="2" TYPE="double" UNITS="bytes/sec" SLOPE="both" SOURCE="gmond">
+        <EXTRA_DATA>
+          <EXTRA_ELEMENT NAME="GROUP" VAL="network"/>
+          <EXTRA_ELEMENT NAME="DESC" VAL="Number of bytes out per second"/>
+          <EXTRA_ELEMENT NAME="TITLE" VAL="Bytes Sent"/>
+        </EXTRA_DATA>
+      </METRICS>
+      <METRICS NAME="proc_total" SUM="236" NUM="2" TYPE="double" UNITS=" " SLOPE="both" SOURCE="gmond">
+    </CLUSTER>
+  </GRID>
+</GANGLIA_XML>
