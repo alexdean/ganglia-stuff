@@ -35,7 +35,13 @@
           <EXTRA_ELEMENT NAME="TITLE" VAL="Bytes Sent"/>
         </EXTRA_DATA>
       </METRICS>
-      <METRICS NAME="proc_total" SUM="236" NUM="2" TYPE="double" UNITS=" " SLOPE="both" SOURCE="gmond">      
+      <METRICS NAME="proc_total" SUM="94" NUM="1" TYPE="double" UNITS=" " SLOPE="both" SOURCE="gmond">
+        <EXTRA_DATA>
+          <EXTRA_ELEMENT NAME="GROUP" VAL="process"/>
+          <EXTRA_ELEMENT NAME="DESC" VAL="Total number of processes"/>
+          <EXTRA_ELEMENT NAME="TITLE" VAL="Total Processes"/>
+        </EXTRA_DATA>
+      </METRICS>
     </CLUSTER>
     <CLUSTER NAME="cluster1" LOCALTIME="1300665410" OWNER="unspecified" LATLONG="unspecified" URL="unspecified">
       <HOSTS UP="2" DOWN="0" SOURCE="gmetad"/>
@@ -46,7 +52,13 @@
           <EXTRA_ELEMENT NAME="TITLE" VAL="Bytes Sent"/>
         </EXTRA_DATA>
       </METRICS>
-      <METRICS NAME="proc_total" SUM="236" NUM="2" TYPE="double" UNITS=" " SLOPE="both" SOURCE="gmond">
+      <METRICS NAME="proc_total" SUM="94" NUM="1" TYPE="double" UNITS=" " SLOPE="both" SOURCE="gmond">
+        <EXTRA_DATA>
+          <EXTRA_ELEMENT NAME="GROUP" VAL="process"/>
+          <EXTRA_ELEMENT NAME="DESC" VAL="Total number of processes"/>
+          <EXTRA_ELEMENT NAME="TITLE" VAL="Total Processes"/>
+        </EXTRA_DATA>
+      </METRICS>
     </CLUSTER>
   </GRID>
 </GANGLIA_XML>

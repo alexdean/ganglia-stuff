@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <!-- /cluster1/?filter=summary -->
 <GANGLIA_XML VERSION="3.1.7" SOURCE="gmetad">
-  <GRID NAME="Grid1" AUTHORITY="http://rhel5-dev/ganglia/g1" LOCALTIME="1300849902">
+  <GRID NAME="grid1" AUTHORITY="http://rhel5-dev/ganglia/g1" LOCALTIME="1300849902">
     <CLUSTER NAME="cluster1" LOCALTIME="1300849893" OWNER="unspecified" LATLONG="unspecified" URL="unspecified">
       <HOSTS UP="2" DOWN="0" SOURCE="gmetad"/>
       <METRICS NAME="bytes_out" SUM="886.16" NUM="2" TYPE="double" UNITS="bytes/sec" SLOPE="both" SOURCE="gmond">
