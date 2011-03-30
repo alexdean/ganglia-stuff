@@ -1,12 +1,23 @@
 <?php
+/**
+ * Usage: phpunit LegacyGmetadTest
+ *   scripts/test_gmetad.rb must be running on localhost:8699
+ *
+ * Tests use ganglia.php to make a request to gmetad.  ganglia.php places output
+ * in global variables, and assertions are made against these variables.
+ *
+ * Expected output is produced by scripts/generate_expected_output.php.
+ *
+ * The purpose of these tests it to ensure that ganglia.php's behavior remains the
+ * same while refactoring work changes its underlying implementation.
+ */
+
 $gweb_dir = '/Users/alex/Code/alexdean-ganglia-misc/ganglia-web';
 require "$gweb_dir/functions.php";
 require "$gweb_dir/ganglia.php";
 
 $base_dir = dirname(__FILE__);
 require "$base_dir/scripts/expected_output.php";
-
-$contexts = array("meta", "cluster", "index_array", "cluster-summary", "node");
 
 class LegacyGmetadTest extends PHPUnit_Framework_TestCase {
   
